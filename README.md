@@ -73,7 +73,7 @@ It is fine to change your project goals, but please resubmit the project plan fo
 
 
 ## Teams
-We are a team of two - Kristy Chen (sc3248) and Ling Zhong (lz555). We designed the interaction together, with Ling further working on the remote communication and the integration of camera and email. Kristy worked on the assembly of the system, scenario testing, and the production of the demo video.
+We are a team of two - Kristy Chen (sc3248) and Ling Zhong (lz555). We designed the interaction together, with Ling further working on the backend of the project, including fall detection algorithm, integration of sensor,camera and email, alert and MQTT communication. Kristy worked on the assembly of the system, scenario testing, and the production of the demo video.
 
 ## Examples
 
