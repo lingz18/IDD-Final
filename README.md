@@ -53,14 +53,17 @@ We sought to use the story board as a foundation to design the entire system. Af
 A. Sensor to detect falling <br />
 B. Allow user to cancel an alert (as we consider the risk of false trigger might produce unnecessary confusion and burden) <br />
 C. Send the alert and communicate with an emergency contact <br />
+The following is the color scheme employed to communicate clearly about different states of the system. We are aware that color could be a fantastic facillitator in communication especially in our case when the display is not in a readable size; therefore, we want to use colors to convey and emphasize different meanings.
+![P5:Alert](https://github.com/kchen1009/Interactive-Lab-Hub/blob/Fall2021/Final%20Project/Alert.png)
+4. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.) <br />
 
 
-4. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.)
+
 5. Video of someone using your project <br />
 Video - https://drive.google.com/file/d/1mxeScjrWFT1AI0EFFzXBPnWg3Pgqlleq/view?usp=sharing
 6. Reflections on process (What have you learned or wish you knew at the start?) <br />
 
-One thing that w
+One thing we wish we could spend more time doing research on is the user behavior. If we have more time, we'd like to learn more about where/when and all kinds falling situations for elderly people so we could adjust our design accordingly. For instance, if we find out that most falls occur in the bathroom, we would have made the exterior of the device waterproof. For now, since it's still a rough prototype, we decided to go with cardboards because they are affordable and effective. We did tons of experiments and found out that cardboards are pretty durable - we dropped the device to imitate falling, and surprisingly the cardboard itself did not rip at all while holding the pi together. <br />
 
 7. Group work distribution questionnaire
 
@@ -70,8 +73,7 @@ It is fine to change your project goals, but please resubmit the project plan fo
 
 
 ## Teams
-
-You can and are not required to work in teams. Be clear in documentation who contributed what. The total project contributions should reflect the number of people on the project.
+We are a team of two - Kristy Chen (sc3248) and Ling Zhong (lz555). We designed the interaction together, with Ling further working on the remote communication and the integration of camera and email. Kristy worked on the assembly of the system, scenario testing, and the production of the demo video.
 
 ## Examples
 
