@@ -46,24 +46,63 @@ The finished product is a wearable device to detect one's falling. By wearing th
 
 
 
-3. Documentation of design process <br />
+3. Building the system <br />
 The idea and interaction is illustrated in the storyboard below.
 ![P1:Storyboard](https://github.com/kchen1009/Interactive-Lab-Hub/blob/Fall2021/Final%20Project/Storyboard.JPG)
-We sought to use the story board as a foundation to design the entire system. After a few rounds of discussion and iteration, we decided that the system need to fulfill the following essential requirements - <br />
+We sought to use the story board as a foundation to design the entire system. After a few rounds of discussion and iteration, we decided that the system will fulfill the following functions - <br />
 A. Sensor to detect falling <br />
 B. Allow user to cancel an alert (as we consider the risk of false trigger might produce unnecessary confusion and burden) <br />
 C. Send the alert and communicate with an emergency contact <br />
 The following is the color scheme employed to communicate clearly about different states of the system. We are aware that color could be a fantastic facillitator in communication especially in our case when the display is not in a readable size; therefore, we want to use colors to convey and emphasize different meanings.
-![P5:Alert](https://github.com/kchen1009/Interactive-Lab-Hub/blob/Fall2021/Final%20Project/Alert.png)
+![P5:Alert](https://https://github.com/lingz18/IDD-Final/blob/master/Final%20Project/Alert.png)
+And we aim to make the wearable one portable. Therefore we power it with a portable charger, and after encasing it, attach a clip to it so it's easy to attach it to clothes and belts. The built-in speaker of the webcam couldn't play the alert sound right(not loud enough and crackling) therefore we use an external speaker.
+![P6:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project4.jpg)
+![P7:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project5.jpg)
+![P8:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project6.jpg)
+
+
+
 4. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.) <br />
 
+## Setup and running the program
+
+First, we enter the code directory and install all the dependencies
+```
+pip3 install -r requirements.txt 
+```
+Next, to get the email alerts with video, edit the 'tomail' in mail.py file.
+```
+nano main.py
+```
+And in the mail.py file, locate toEmail, which is currently set to be Ling's email:
+```
+# Email of emergency contact
+toEmail = 'lz555@cornell.edu' 
+```
+You can change the emergency contact email. This email module sends an emergency alert named "Fall is Detected" with fall video attached using the gmail SMTP server.
+
+
+Then, before running the program, make sure we set up the two PIs and have MQTT server up and running. For the first pi, connect accelerometer and red QWIIC LED button. For the second pi, connect webcam and speaker. Clone the code directory to both Pis, and on the first Pi, run:
+```
+python test.py
+```
+And on the second run:
+```
+python alertcam.py
+```
 
 
 5. Video of someone using your project <br />
 Video - https://drive.google.com/file/d/1mxeScjrWFT1AI0EFFzXBPnWg3Pgqlleq/view?usp=sharing
 6. Reflections on process (What have you learned or wish you knew at the start?) <br />
 
-One thing we wish we could spend more time doing research on is the user behavior. If we have more time, we'd like to learn more about where/when and all kinds falling situations for elderly people so we could adjust our design accordingly. For instance, if we find out that most falls occur in the bathroom, we would have made the exterior of the device waterproof. For now, since it's still a rough prototype, we decided to go with cardboards because they are affordable and effective. We did tons of experiments and found out that cardboards are pretty durable - we dropped the device to imitate falling, and surprisingly the cardboard itself did not rip at all while holding the pi together. <br />
+* Exploring our fall detection algorithm took quite some time and experiments. First, we naturally thought machine learning is the way to go. There are vision-based method and accelerometer-based. The vision-based works well, but it's harder to handle exeptions like visual obstruction, low light or partial view. The accelerometer-based method is more robust in that regard. However, in our implementation, rule-based model works more robustly and efficiently than machine learning models. It handles exceptions well, and introducing the false alert button really helped too.
+
+
+* One thing we wish we could spend more time doing research on is the user behavior. If we have more time, we'd like to learn more about where/when and all kinds falling situations for elderly people so we could adjust our design accordingly. For instance, if we find out that most falls occur in the bathroom, we would have made the exterior of the device waterproof. For now, since it's still a rough prototype, we decided to go with cardboards because they are affordable and effective. We did tons of experiments and found out that cardboards are pretty durable - we dropped the device to imitate falling, and surprisingly the cardboard itself did not rip at all while holding the pi together. <br />
+
+
+
 
 7. Group work distribution questionnaire
 
