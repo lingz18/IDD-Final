@@ -64,24 +64,27 @@ And we aim to make the wearable one portable. Therefore we power it with a porta
 
 4. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.) <br />
 
-
+### a. Components
 Below is all the components we used to build our prototype.
 
 * Two Raspberry Pi 4+miniPiTFT:<br />
   Receiver & Sender(wearable device), both with Adafruit miniPiTFT 240x135 LED screen. And two of them will communicate via MQTT
-* MPU6050 Accelerometer:<br />
+* MPU6050 Accelerometer (on Sender):<br />
   The 6-DoF accelerometer and Gyro will be used to detect whether a user has fallen by capturing the change in acceleration and angular speed.
-* SparkFun Qwiic LED Button:<br />
-  The LED button will blink to remind the user to cancel it in the event of a false alarm
-* WebCamera:<br />
+* SparkFun Qwiic LED Button (on Sender):<br />
+  The LED button on the Sender Pi will blink to remind the user to cancel it in the event of a false alarm
+* WebCamera (on Receiver):<br />
   We deployed the Provision 720P webcam on the receiver Pi to record footage of the fall accident. 
-* Speaker:<br />
+* Speaker (on Sender):<br />
   Play alert audio if a fall is detected
+* Portable Charger:
+  A charger that outputs 5V 3.0A. Although we found out that 5V 2.0A would also work.
 
+### State Diagram
 
+![P9:State Diagram](https://github.com/lingz18/IDD-Final/blob/master/diagram.jpg)
 
-
-## Setup and running the program
+### Setup and running the program
 
 First, we enter the code directory and install all the dependencies
 ```

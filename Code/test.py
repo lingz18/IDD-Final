@@ -203,8 +203,7 @@ while True:
         disp.image(image, rotation)
 
 
-    # if currAcc >= 2.5 * g and angVel >= 3:
-    if currAcc >= 2.2 * g and angVel >= 2.5:
+    if currAcc >= 2.5 * g and angVel >= 3:
         for x in range(20):
             currAcc, angVel, _ = streamAccGyr()
 
