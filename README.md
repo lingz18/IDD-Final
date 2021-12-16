@@ -54,7 +54,7 @@ A. Sensor to detect falling <br />
 B. Allow user to cancel an alert (as we consider the risk of false trigger might produce unnecessary confusion and burden) <br />
 C. Send the alert and communicate with an emergency contact <br />
 The following is the color scheme employed to communicate clearly about different states of the system. We are aware that color could be a fantastic facillitator in communication especially in our case when the display is not in a readable size; therefore, we want to use colors to convey and emphasize different meanings.
-![P5:Alert](https://github.com/lingz18/IDD-Final/blob/master/Alert.png)
+![P5:Alert](https://github.com/lingz18/IDD-Final/blob/master/Alert.png)<br />
 And we aim to make the wearable one portable. Therefore we power it with a portable charger, and after encasing it, attach a clip to it so it's easy to attach it to clothes and belts. The built-in speaker of the webcam couldn't play the alert sound right(not loud enough and crackling) therefore we use an external speaker.
 ![P6:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project4.jpg)
 ![P7:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project5.jpg)
@@ -63,6 +63,23 @@ And we aim to make the wearable one portable. Therefore we power it with a porta
 
 
 4. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.) <br />
+
+
+Below is all the components we used to build our prototype.
+
+* Two Raspberry Pi 4+miniPiTFT:
+  Receiver & Sender(wearable device), both with Adafruit miniPiTFT 240x135 LED screen. And two of them will communicate via MQTT
+* MPU6050 Accelerometer:
+  The 6-DoF accelerometer and Gyro will be used to detect whether a user has fallen by capturing the change in acceleration and angular speed.
+* SparkFun Qwiic LED Button:
+  The LED button will blink to remind the user to cancel it in the event of a false alarm
+* WebCamera:
+  We deployed the Provision 720P webcam on the receiver Pi to record footage of the fall accident. 
+* Speaker:
+  Play alert audio if a fall is detected
+
+
+
 
 ## Setup and running the program
 
