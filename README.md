@@ -67,15 +67,15 @@ And we aim to make the wearable one portable. Therefore we power it with a porta
 
 Below is all the components we used to build our prototype.
 
-* Two Raspberry Pi 4+miniPiTFT:
+* Two Raspberry Pi 4+miniPiTFT:<br />
   Receiver & Sender(wearable device), both with Adafruit miniPiTFT 240x135 LED screen. And two of them will communicate via MQTT
-* MPU6050 Accelerometer:
+* MPU6050 Accelerometer:<br />
   The 6-DoF accelerometer and Gyro will be used to detect whether a user has fallen by capturing the change in acceleration and angular speed.
-* SparkFun Qwiic LED Button:
+* SparkFun Qwiic LED Button:<br />
   The LED button will blink to remind the user to cancel it in the event of a false alarm
-* WebCamera:
+* WebCamera:<br />
   We deployed the Provision 720P webcam on the receiver Pi to record footage of the fall accident. 
-* Speaker:
+* Speaker:<br />
   Play alert audio if a fall is detected
 
 
