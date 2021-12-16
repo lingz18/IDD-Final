@@ -134,7 +134,9 @@ Video - https://drive.google.com/file/d/1mxeScjrWFT1AI0EFFzXBPnWg3Pgqlleq/view?u
 
 * One thing we wish we could spend more time doing research on is the user behavior. If we have more time, we'd like to learn more about where/when and all kinds falling situations for elderly people so we could adjust our design accordingly. For instance, if we find out that most falls occur in the bathroom, we would have made the exterior of the device waterproof. For now, since it's still a rough prototype, we decided to go with cardboards because they are affordable and effective. We did tons of experiments and found out that cardboards are pretty durable - we dropped the device to imitate falling, and surprisingly the cardboard itself did not rip at all while holding the pi together. <br />
 
+* MQTT is not always stable and does lag sometimes. So in those cases, we have to create the topic in the MQTT explorer manually sometimes.
 
+* When we let the receiver Pi run for a long time, sometimes the Pi will throw exception "pi OSError: [Errno 121] Remote I/O error" and stop working. Then we would have to re-run the program. We think this is due to the unstable connection of I2C.
 
 
 7. Group work distribution questionnaire
