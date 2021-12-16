@@ -54,7 +54,7 @@ A. Sensor to detect falling <br />
 B. Allow user to cancel an alert (as we consider the risk of false trigger might produce unnecessary confusion and burden) <br />
 C. Send the alert and communicate with an emergency contact <br />
 The following is the color scheme employed to communicate clearly about different states of the system. We are aware that color could be a fantastic facillitator in communication especially in our case when the display is not in a readable size; therefore, we want to use colors to convey and emphasize different meanings.
-![P5:Alert](https://https://github.com/lingz18/IDD-Final/blob/master/Final%20Project/Alert.png)
+![P5:Alert](https://https://github.com/lingz18/IDD-Final/blob/master/Alert.png)
 And we aim to make the wearable one portable. Therefore we power it with a portable charger, and after encasing it, attach a clip to it so it's easy to attach it to clothes and belts. The built-in speaker of the webcam couldn't play the alert sound right(not loud enough and crackling) therefore we use an external speaker.
 ![P6:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project4.jpg)
 ![P7:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project5.jpg)
