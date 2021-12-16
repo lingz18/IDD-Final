@@ -56,9 +56,9 @@ C. Send the alert and communicate with an emergency contact <br />
 The following is the color scheme employed to communicate clearly about different states of the system. We are aware that color could be a fantastic facillitator in communication especially in our case when the display is not in a readable size; therefore, we want to use colors to convey and emphasize different meanings.
 ![P5:Alert](https://github.com/lingz18/IDD-Final/blob/master/Alert.png)<br />
 And we aim to make the wearable one portable. Therefore we power it with a portable charger, and after encasing it, attach a clip to it so it's easy to attach it to clothes and belts. The built-in speaker of the webcam couldn't play the alert sound right(not loud enough and crackling) therefore we use an external speaker.
-![P6:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project4.jpg)
-![P7:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project5.jpg)
-![P8:Wearable](https://github.com/lingz18/IDD-Final/blob/master/Project6.jpg)
+![P6:Wearable](https://github.com/lingz18/IDD-Final/blob/master/img/Project4.jpg)
+![P7:Wearable](https://github.com/lingz18/IDD-Final/blob/master/img/Project5.jpg)
+![P8:Wearable](https://github.com/lingz18/IDD-Final/blob/master/img/Project6.jpg)
 
 
 
@@ -84,7 +84,7 @@ Below is all the components we used to build our prototype.
 
 The flow of the algorithm is shown as below: <br />
 
-![P9:Fall Algorithm](https://github.com/lingz18/IDD-Final/blob/master/algorithm.jpg)
+![P9:Fall Algorithm](https://github.com/lingz18/IDD-Final/blob/master/img/algorithm.jpg)
 
 As you can see, our fall detection algorithm is rule-based. It's based on threshold and time windows summarized in the work of the following paper:
 * A.K. Bourke, G.M. Lyons, A threshold-based fall-detection algorithm using a bi-axial gyroscope sensor, in Medical Engineering & Physics, 2008, https://www.sciencedirect.com/science/article/pii/S1350453306002657 
@@ -95,7 +95,7 @@ As you can see, our fall detection algorithm is rule-based. It's based on thresh
 
 ### c. State Diagram
 
-![P10:State Diagram](https://github.com/lingz18/IDD-Final/blob/master/diagram.jpg)
+![P10:State Diagram](https://github.com/lingz18/IDD-Final/blob/master/img/diagram.jpg)
 
 ### d. Setup and running the program
 
@@ -126,7 +126,9 @@ python alertcam.py
 
 
 5. Video of someone using your project <br />
-Video - https://drive.google.com/file/d/1mxeScjrWFT1AI0EFFzXBPnWg3Pgqlleq/view?usp=sharing
+[![demo](./img/vid2.png)](https://drive.google.com/file/d/1mxeScjrWFT1AI0EFFzXBPnWg3Pgqlleq/view?usp=sharing)
+
+
 6. Reflections on process (What have you learned or wish you knew at the start?) <br />
 
 * Exploring our fall detection algorithm took quite some time and experiments. First, we naturally thought machine learning is the way to go. There are vision-based method and accelerometer-based. The vision-based works well, but it's harder to handle exeptions like visual obstruction, low light or partial view. The accelerometer-based method is more robust in that regard. However, in our implementation, rule-based model works more robustly and efficiently than machine learning models. It handles exceptions well, and introducing the false alert button really helped too.
